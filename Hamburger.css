@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: url(IMG-20250314-WA0006\(2\)\ -\ Copy.jpg);
+    background-size:cover;
+    background-repeat: no-repeat; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{
+    background: rgb(171, 140, 140);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+
+}
+nav ul{
+    /* width: 100%; */
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+}
+nav li{
+    height: 60px; 
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+nav a:hover{
+    /* text-decoration: underline; */
+  background-color: rgb(231, 172, 172);
+  border-radius: 50px;
+  /* padding-inline: 2px; */
+}
+
+
+nav li:first-child{
+    margin-right: auto;
+}
+.Sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    /* To make a glass effect thats if there is a layer of two background  so for the other background to get transparent will use backdrop-filter property which works with background color */
+    backdrop-filter: blur(20px);
+    background-color: rgb(225, 225, 225,0.2);
+    /* need to disable the display by assigning it to none so as to show the IMG(icon) we pass to be visible  to be max and min i.e by assigning flex to display property will show the sidebar and once set to none will be disapear again. so to achieve this by clicking the icon or to have control over it ... will need to assign a function(javascript) to do that */
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.Sidebar li{
+    width: 100%;
+}
+.Sidebar a{
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+}
+@media(max-width:800px){
+    .hideOnmobile{
+        display:none
+    }
+    .menu-button{
+   display: block;
+}
+}
+@media(max-width:400px){
+    .Sidebar{
+        /* width: 100%; */
+    }
+}
